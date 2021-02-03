@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="se">
+
+<head>
+	<title>@ViewData["Title"]</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header>
+			<div class="logo">
+				<><a href="Index"><img src="img/space.jpg" alt="lazer cats and tacos" /></a>
+			</div>
+			<div class="date-box"><p class="date">Dagens datum är:<span id="jsout" class="date"></span></p></div>
+		</header>
+		<nav>
+			<ul>
+				<li><a href="/Index">Startsida</a></li>
+				<li><a href="/About">About</a></li>
+				<li><a href="/Razor">Lazors</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			@RenderBody()
+		</main>
+		<footer><p>Av Morgan Andersson - Kontakta mig via e-post: info@ameste.se</p></footer>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

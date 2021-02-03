@@ -1,0 +1,34 @@
+﻿@page
+@model MyApp.Namespace.RazorModel
+@{
+	ViewData["Title"] = "RazorLazors";
+
+	var dateTime = DateTime.Now;
+    string date = DateTime.Now.ToString("dd MMMM yyyy");
+    string time = DateTime.Now.ToString("hh:mm");
+
+	string day = Convert.ToString(dateTime.DayOfWeek);
+	string[] cours = {
+		"DT057G Webbutveckling I", "DT084G Introduktion till programmering med JavaScript", "GD008G Typografi och form för webb",
+		"DT003G Databaser", "DT093G Webbutveckling II", "DT068G Webbanvändbarhet", "DT152G Webbdesign för CMS", "DT173G Webbutveckling III",
+		"IK060G Projektledning", "DT162G JavaScript-baserad webbutveckling", "DT071G Programmering I C#.net",
+	};
+	List<string> courses = new List<string>(cours);
+}
+
+<p>Dagens datum är: @date</p>
+<p>Klockan är nu: @time</p>
+
+<h2>Razor för att skriva ut datum etc:</h2>
+@if(day == "Monday") {
+    <p>Idag är det måndag.</p>
+} else {
+    <p>Idag är det nån annan dag än måndag. Kanske rentav helg?</p>
+}
+<br />
+<h2>Razor för att loopa en lista:</h2>
+<ul>@foreach(string course in courses)
+	{
+		<li>@course</li>
+	}
+</ul>

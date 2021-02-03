@@ -1,0 +1,111 @@
+.wrapper {
+    margin: auto;
+    max-width: 1080px;
+}
+
+body {
+    background-color: rgb(8, 8, 32);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 32px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p,
+span {
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    color: red;
+}
+
+header {
+    border: 2px solid rgb(174, 0, 255);
+    border-top: none;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-column: 1/3;
+    padding: 1em;
+    margin-top: 1em;
+}
+
+.date {
+    color: white;
+}
+
+.date-box {
+    text-align: Center;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 25% 75%;
+}
+
+footer {
+    grid-column: 1/3;
+    border: 2px solid rgb(174, 0, 255);
+    border-bottom: none;
+}
+
+nav {
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    color: green;
+    text-decoration: none;
+    margin: 1px;
+    text-align: center;
+    font-size: 2em;
+    padding: 10px;
+    width: 100%;
+}
+
+nav ul li {
+    border: 1px solid rgb(174, 0, 255);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: rgb(174, 0, 255);
+}
+
+main {
+    padding: 20px;
+    min-height: 70vh;
+}
+
+img {
+    width: 50%;
+}
+
+li {
+    color: red;
+}
+
+@media (max-width: 700px) {
+    nav {
+        grid-column: 1/3;
+    }
+    main {
+        grid-column: 1/3;
+        text-align: CenteR;
+    }
+    img {
+        width: 75%;
+    }
+}
